@@ -1,3 +1,3 @@
 # Login-form
 this is complete login form template
-[click_here_to_use](index.html)
+[click_here_for_demo](index.html)
