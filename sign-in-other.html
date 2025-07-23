@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In With Other</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #2F80ED; /* Same as login page */
+        }
+        .other-signin-container {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .other-signin-container h2 {
+            color: #333333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .other-signin-container p {
+            color: #888888;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .social-buttons button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #DDDDDD;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .social-buttons button:hover {
+            background-color: #F8F8F8;
+            border-color: #BBBBBB;
+        }
+        .social-buttons .google-btn {
+            background-color: #DB4437;
+            color: white;
+            border: none;
+        }
+        .social-buttons .google-btn:hover {
+            background-color: #C23321;
+        }
+        .social-buttons .facebook-btn {
+            background-color: #4267B2;
+            color: white;
+            border: none;
+        }
+        .social-buttons .facebook-btn:hover {
+            background-color: #365899;
+        }
+        .back-to-login {
+            display: block;
+            margin-top: 20px;
+            color: #2F80ED;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .back-to-login:hover {
+            color: #256bbd;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="other-signin-container">
+        <h2>Sign In with Other</h2>
+        <p>Choose your preferred method to sign in.</p>
+        <div class="social-buttons">
+            <button class="google-btn"><i class="fab fa-google"></i> Sign In with Google</button>
+            <button class="facebook-btn"><i class="fab fa-facebook"></i> Sign In with Facebook</button>
+            <button><i class="fas fa-envelope"></i> Sign In with Email (Coming Soon)</button>
+        </div>
+        <a href="index.html" class="back-to-login">Back to Login</a>
+    </div>
+</body>
+</html> 

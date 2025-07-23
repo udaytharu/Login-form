@@ -1,0 +1,344 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #2F80ED; /* Blue background for the entire page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container for the login form */
+.container {
+    display: flex;
+    width: 900px; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    background-color: #3B82F6; /* Deeper blue for the welcome section */
+    width: 45%; /* Approximately half of the container */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.welcome-heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.headline-name {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Blue Circles */
+.blue-circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white to create blue circles on blue background */
+    border-radius: 50%;
+}
+
+.circle-large {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    left: -100px;
+}
+
+.circle-medium {
+    width: 180px;
+    height: 180px;
+    bottom: -90px;
+    left: -50px;
+}
+
+.circle-small {
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+}
+
+/* Form Section Styles */
+.form-section {
+    background-color: #FFFFFF; /* White background for the form section */
+    width: 55%; /* Remaining half of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 350px; /* Max width for the form within its section */
+}
+
+.form-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    color: #333333;
+    font-size: 32px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-header p {
+    color: #888888;
+    font-size: 13px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888888;
+}
+
+.input-group .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #2F80ED; /* Blue color for SHOW */
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.input-group .toggle-password:hover {
+    color: #256bbd;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 50px 12px 40px; /* Adjusted right padding to make space for toggle */
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2F80ED;
+    box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888888;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #2F80ED; /* Blue checkbox */
+    border-radius: 3px;
+}
+
+.forgot-password {
+    color: #2F80ED;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #256bbd;
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #2F80ED; /* Blue button */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #256bbd;
+    transform: translateY(-1px);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.or-separator {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.or-separator::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #EEEEEE;
+}
+
+.or-separator::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #EEEEEE;
+}
+
+.or-text {
+    background-color: #FFFFFF;
+    color: #AAAAAA;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.login-btn-alt {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    color: #555555;
+    margin-top: 0;
+}
+
+.login-btn-alt:hover {
+    background-color: #F8F8F8;
+    border-color: #BBBBBB;
+    color: #333333;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888888;
+}
+
+.signup-link a {
+    color: #2F80ED;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #256bbd;
+    text-decoration: underline;
+}
+
+/* Error and Success Messages */
+.error-message {
+    color: #DC2626;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+    animation: shake 0.5s ease-in-out;
+}
+
+.input-group input.error {
+    border-color: #DC2626;
+    background-color: rgba(220, 38, 38, 0.05);
+}
+
+.success-message {
+    background-color: #2F80ED;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 30px 20px;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+} 

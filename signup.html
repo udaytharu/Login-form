@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #2F80ED; /* Same as login page */
+        }
+        .signup-container {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .signup-container h2 {
+            color: #333333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .signup-container .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+        .signup-container .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888888;
+        }
+        .signup-container input {
+            width: 100%;
+            padding: 12px 40px;
+            border: 1px solid #DDDDDD;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .signup-container input:focus {
+            outline: none;
+            border-color: #2F80ED;
+            box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.2);
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #2F80ED;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+        .signup-btn:hover {
+            background-color: #256bbd;
+            transform: translateY(-1px);
+        }
+        .back-to-login {
+            display: block;
+            margin-top: 20px;
+            color: #2F80ED;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .back-to-login:hover {
+            color: #256bbd;
+            text-decoration: underline;
+        }
+        .success-message, .error-message {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+        }
+        .success-message {
+            background-color: #D4EDDA;
+            color: #155724;
+        }
+        .error-message {
+            background-color: #F8D7DA;
+            color: #721C24;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <div id="signupMessage" class="success-message"></div>
+        <div id="signupError" class="error-message"></div>
+        <form id="signupForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="signupUsername" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        <a href="index.html" class="back-to-login">Back to Login</a>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html> 
